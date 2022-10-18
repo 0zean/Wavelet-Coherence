@@ -16,6 +16,7 @@ dt = seq(0, length(ES)-2, by=1) # Time-step array
 ES_stationary = diff(log(ES), lag = 1) # 1st-Ord log diff
 CL_stationary = diff(log(CL), lag = 1) # 1st-Ord log diff
 
+# Augmented Dickey–Fuller Test
 adf_ES = adf.test(ES_stationary) # Test Stationarity
 adf_CL = adf.test(CL_stationary) # Test Stationarity
 
